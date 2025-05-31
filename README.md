@@ -1,107 +1,59 @@
-# 3D Character Controller
+# R3F Capstone City Hub
 
-A 3D character controller built with React Three Fiber, Rapier physics, and advanced rendering techniques. This project demonstrates how to create a robust third-person character controller with mobile support, physics interactions, and post-processing effects.
-
-[Live Demo](https://character-sample-project.netlify.app/)
-
-<img src="./public/demo.gif" alt="Demo" width="600" />
+A React Three Fiber (R3F) capstone project featuring a city hub with portal-based navigation to multiple interactive building scenes.
 
 ## Features
 
-- **Responsive 3D Character Controller**: Smooth movement with WASD/arrow keys, jumping, and sprinting
-- **Mobile Controls**: Touch-based joystick and jump button for mobile devices
-- **Physics Simulation**: Realistic physics using React Three Rapier
-- **Stunning Visual Effects**: Post-processing pipeline with bloom, chromatic aberration, vignette and more
-- **Environment Interaction**: Dynamic objects that respond to physics (bouncing balls)
-- **Customizable Settings**: Debug UI for tweaking character, camera, lighting, and visual effects
-- **Optimized Performance**: Efficient rendering and physics calculations
-- **Cross-platform**: Works on desktop and mobile browsers
+- **City Hub**: Central navigation area with 5 building portals
+- **Portal System**: Interactive transitions between scenes
+- **Building Scenes**: 
+  - Innovation Lab
+  - Socialization Sphere  
+  - Educational Journey
+  - Prom Experience
+  - Community Contributor
+- **Character Controller**: Smooth WASD movement with physics
+- **Mobile Support**: Touch controls for mobile devices
 
-## How It Works
+## Getting Started
 
-### Core Tech
+```bash
+# Install dependencies
+npm install
 
-- **React**: UI framework for the application structure
-- **Three.js/React Three Fiber**: 3D rendering library and React bindings
-- **@react-three/rapier**: Physics engine for realistic movement and collisions
-- **@react-three/drei**: Useful helpers for React Three Fiber
-- **@react-three/postprocessing**: Advanced visual effects
-- **Leva**: Debug UI for tweaking parameters
-- **Tailwind CSS**: Utility-first CSS framework for styling
+# Start development server
+npm run dev
 
-### Main Components
+# Build for production
+npm run build
+```
 
-1. **CharacterController**: Manages character movement, physics, and animation
-2. **FollowCamera**: Third-person camera that smoothly follows the character
-3. **Ground & Objects**: Physical environment with collision detection
-4. **MobileControls**: Touch-based joystick and jump button for mobile devices
-5. **Post-processing Pipeline**: Visual effects like bloom, chromatic aberration, and depth of field
+## Controls
 
-### Physics System
+- **WASD** - Move character
+- **SPACE** - Jump
+- **SHIFT** - Sprint
+- **Click portals** - Navigate between scenes
 
-The character uses a capsule collider with Rapier physics. Key features:
-- Ground detection using raycasting
-- Smooth movement with air control
-- Jump mechanics with proper forces
-- Collision response with environmental objects
+## Tech Stack
 
-## Installation
+- React Three Fiber
+- React Three Drei
+- React Three Rapier (Physics)
+- React Three PostProcessing
+- Vite
+- TypeScript
+- Tailwind CSS
 
-### Prerequisites
-
-- Node.js 16+ and npm
-
-### Setup
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/3d-character-controller.git
-   cd 3d-character-controller
-   ```
-
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-3. Start the development server:
-   ```bash
-   npm run dev
-   ```
-
-## Usage
-
-### Controls
-
-- **WASD/Arrow Keys**: Move the character
-- **Space**: Jump
-- **Shift**: Sprint
-- **Mobile**: Use the left joystick to move and the right button to jump
-
-### Customization
-
-The project uses Leva for a debug UI that allows you to adjust various parameters:
-
-- **Character Physics**: Movement speed, jump height, air control, etc.
-- **Camera**: Distance, height, and smoothness
-- **Lighting**: Ambient and directional light settings
-- **Post-processing**: Enable/disable and adjust visual effects
-
-## Development
-
-### Project Structure
+## Project Structure
 
 ```
-/src
-  /components         # React components for the 3D scene
-  /contexts           # React contexts (e.g., mobile controls)
-  /hooks              # Custom hooks for controls and effects
-  /shaders            # Custom shaders (toon shader)
-  /utils              # Utility functions for physics
-  App.tsx             # Main application component
-  main.tsx            # Entry point
-/public
-  /models             # 3D models (character, environment)
+src/
+├── components/           # Reusable 3D components
+├── scenes/              # Individual scene components
+├── hooks/               # Custom React hooks
+├── contexts/            # React contexts
+└── utils/               # Utility functions
 ```
 
 ## License
